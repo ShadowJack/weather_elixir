@@ -24,7 +24,7 @@ defmodule Weather.CLI do
   Returns errors or help or code
   """
   def parse_args(argv) do
-    do_parse_args OptionParser.parse(argv, strict: [help: boolean], aliases: [h: :help])
+    do_parse_args OptionParser.parse(argv, strict: [help: :boolean], aliases: [h: :help])
   end
 
   defp do_parse_args({[], [code], []}), do: code
@@ -46,14 +46,16 @@ defmodule Weather.CLI do
     System.halt(0)
   end
 
+  def process(errors) when is_list(errors) do
+    errors 
+    |> Enum.each(&IO.inspect/1)
+  end
+
   def process(code) do
     code
-    #|> Weather.Downloader.fetch
+    |> Weather.Downloader.fetch
     #|> Weather.XMLParser.parse_xml
     #|> Weather.PrettyPrinter.print_weather
   end
 
-  def process(errors) when is_list(errors) do
-    errors |> Enum.each(&inspect/1))
-  end
 end
