@@ -2,8 +2,8 @@
 
 **TODO:**
   ~~1. Receive command line args, and choose what to do~~
-  2. Fetch data about current weather
-  3. Parse xml
+  ~~2. Fetch data about current weather~~
+  ~~3. Parse xml~~
   4. Display in a 'nice' format
 
 ## About
