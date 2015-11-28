@@ -5,6 +5,8 @@ defmodule Weather.Mixfile do
     [app: :weather,
      version: "0.0.1",
      elixir: "~> 1.1",
+     source_url: "https://github.com/ShadowJack/weather_elixir",
+     docs: [extras: ["README.md"]],
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
@@ -29,7 +31,9 @@ defmodule Weather.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.8.0"},
-      {:sweet_xml, "~> 0.5.0"}
+      {:sweet_xml, "~> 0.5.0"},
+      {:ex_doc,    "~> 0.11.1"},
+      {:earmark,   "~> 0.1.19"}
     ]
   end
 end

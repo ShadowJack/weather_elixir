@@ -55,6 +55,7 @@ defmodule Weather.CLI do
     code
     |> Weather.Downloader.fetch
     |> Weather.XMLParser.parse_xml
+    |> Weather.PrettyPrinter.print
   end
 
 end
