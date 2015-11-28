@@ -7,7 +7,7 @@
   4. Display in a 'nice' format
 
 ## About
-This app takes data from http://w1.weather.gov/xml/current\_obs/
+This app takes data from http://w1.weather.gov/xml/current_obs/
 and pretty prints it.
 
 Usage: weather code
