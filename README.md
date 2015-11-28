@@ -10,5 +10,5 @@
 This app takes data from http://w1.weather.gov/xml/current_obs/
 and pretty prints it.
 
-Usage: weather code
-code - unique [code](http://w1.weather.gov/xml/current_obs/) of location in US
+Usage: `weather code`
+([code](http://w1.weather.gov/xml/current_obs/) uniquely defines location in US)
